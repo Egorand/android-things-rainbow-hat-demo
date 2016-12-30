@@ -2,7 +2,8 @@ android-things-rainbow-hat-demo
 ===============================
 
 Demo [Android Things](https://developer.android.com/things/index.html) project, that targets Raspberry Pi 3 + 
-Rainbow HAT setup and demonstrates the usage of various hardware components on the board.  
+Rainbow HAT setup and demonstrates the usage of various hardware components on the board. 
+Check out [Making Rainbow HAT Work with the Android Things](https://blog.egorand.me/making-rainbow-hat-work-with-the-android-things-2/).
 
 License
 -------
