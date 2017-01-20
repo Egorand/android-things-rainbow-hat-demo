@@ -62,6 +62,7 @@ class RainbowHATDemoActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
         buttons = Buttons()
         display = Display()

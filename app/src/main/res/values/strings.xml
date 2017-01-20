@@ -16,4 +16,5 @@
 
 <resources>
     <string name="app_name">Rainbow HAT Samples</string>
+    <string name="greeting_text">Ahoy Android Developers!</string>
 </resources>
