@@ -41,7 +41,7 @@ class RainbowHATDemoActivity : Activity() {
                 69, 69, 69, 69, 69, 69, 69, 62, 66, 69,
                 71, 71, 71, 71, 71, 71, 71, 73, 74, 77,
                 74, 71, 69, 66, 64, 64)
-        val TIMES = listOf(
+        val DURATIONS = listOf(
                 300, 50, 50, 300, 50, 50, 300, 300, 300, 300,
                 300, 50, 50, 300, 50, 50, 300, 300, 300, 300,
                 300, 50, 50, 300, 50, 50, 300, 300, 300, 300,
@@ -75,7 +75,7 @@ class RainbowHATDemoActivity : Activity() {
 
     private fun playMelodyWithLeds() {
         playbackRunnable = Runnable {
-            buzzer.play(NOTES[noteIndex].toDouble(), TIMES[timeIndex] * 0.8)
+            buzzer.play(NOTES[noteIndex].toDouble(), DURATIONS[timeIndex] * 0.8)
             leds.setLed(Leds.LEDS[ledIndex], on = true)
             leds.setLed(Leds.LEDS[prevIndex(ledIndex, Leds.LEDS.size)], on = false)
             if (noteIndex == NOTES.size - 1) {
@@ -83,7 +83,7 @@ class RainbowHATDemoActivity : Activity() {
                 buzzer.close()
                 display.displayMessage(DEFAULT_MESSAGE)
             } else {
-                playHandler.postDelayed(playbackRunnable, TIMES[timeIndex].toLong())
+                playHandler.postDelayed(playbackRunnable, DURATIONS[timeIndex].toLong())
                 timeIndex++
                 noteIndex++
                 ledIndex = nextIndex(ledIndex, Leds.LEDS.size)

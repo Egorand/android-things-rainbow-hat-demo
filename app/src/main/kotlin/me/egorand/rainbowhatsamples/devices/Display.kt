@@ -19,8 +19,8 @@ package me.egorand.rainbowhatsamples.devices
 import com.google.android.things.contrib.driver.ht16k33.AlphanumericDisplay
 import java.io.Closeable
 
-class Display(private val display: AlphanumericDisplay = AlphanumericDisplay(Display.DISPLAY_I2C_BUS))
-    : Closeable {
+class Display(private val display: AlphanumericDisplay =
+              AlphanumericDisplay(Display.DISPLAY_I2C_BUS)) : Closeable {
 
     companion object {
         val DISPLAY_I2C_BUS = "I2C1"

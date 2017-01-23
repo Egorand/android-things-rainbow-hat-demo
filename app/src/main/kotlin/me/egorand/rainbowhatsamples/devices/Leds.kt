@@ -20,8 +20,8 @@ import com.google.android.things.pio.Gpio
 import com.google.android.things.pio.PeripheralManagerService
 import java.io.Closeable
 
-class Leds(peripheralManagerService: PeripheralManagerService = PeripheralManagerService())
-    : Closeable {
+class Leds(peripheralManagerService: PeripheralManagerService =
+           PeripheralManagerService()) : Closeable {
 
     companion object {
 
@@ -44,7 +44,8 @@ class Leds(peripheralManagerService: PeripheralManagerService = PeripheralManage
                 openGpio(peripheralManagerService, LED_BLUE_GPIO_PIN))
     }
 
-    private fun openGpio(service: PeripheralManagerService, pin: String): Gpio {
+    private fun openGpio(service: PeripheralManagerService,
+                         pin: String): Gpio {
         val led = service.openGpio(pin)
         led.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW)
         return led
